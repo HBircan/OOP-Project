@@ -15,7 +15,7 @@ private:
 	string Role;
 
 public:
-	User(int, string, string, string, string, string, string);
+	User(int, string, string, string, string, string);
 	bool ValidatePass(int);
 
 	void setID(int);
