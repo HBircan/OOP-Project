@@ -16,7 +16,7 @@ private:
 
 public:
 	User(int, string, string, string, string, string);
-	bool ValidatePass(int);
+	bool ValidatePass(int) const;
 
 	void setID(int);
 	void setName(string);
