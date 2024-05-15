@@ -1,6 +1,6 @@
 # OOP-Project
 
-We are designing and implementing a library management system with the requirements:
+The project is about designing and implementing a library management system with the requirements:
 
  -Design a system that can manage various library resources, including books,
 magazines, and DVDs. Each type of item should have unique properties and rules
