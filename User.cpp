@@ -2,7 +2,8 @@
 #include "User.h"
 using namespace std;
 
-User::User (int theUserID, string theUsername, string thePassword, string theEmail, string theContactInfo, string theAccessLevel, string theRole) {
+User::User (int theItemAmount, int theUserID, string theUsername, string thePassword, string theEmail, string theContactInfo, string theAccessLevel, string theRole) {
+	ItemAmount = theItemAmount;
 	UserID = theUserID;
 	Username = theUsername;
 	Password = thePassword;
@@ -19,6 +20,10 @@ bool User::ValidatePass(string userPassword) const {
 		return false;
 }
 //Modifiers
+void User::setAmount(int theItemAmount) {
+	ItemAmount = theItemAmount;
+}
+
 void  User::setID(int theUserID) {
 	theUserID = UserID;
 }
