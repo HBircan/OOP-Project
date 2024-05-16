@@ -6,8 +6,9 @@ using namespace std;
 class User
 {
 private:
+	int ItemAmount;
 	int UserID;
-	string UserName;
+	string Username;
 	string Password;
 	string Email;
 	string ContactInfo;
@@ -15,9 +16,10 @@ private:
 	string Role;
 
 public:
-	User(int, string, string, string, string, string);
+	User(int, int, string, string, string, string, string, string);
 	bool ValidatePass(string) const;
 
+	void setAmount(int);
 	void setID(int);
 	void setName(string);
 	void setPassword(string);
@@ -26,6 +28,7 @@ public:
 	void setAccess(string);
 	void setRole(string);
 
+	int getAmount() const;
 	int getID() const;
 	string getName() const;
 	string getPassword() const;
