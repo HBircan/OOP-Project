@@ -1,26 +1,22 @@
-#ifndef LIBRARYDVD_H
-#define LIBRARYDVD_H
-
+#ifndef DVD_H
+#define DVD_H
+#include "Item.h"
 #include <string>
-
 using namespace std;
 
-class LibraryDVD {
+class DVD : public Item {
 private:
-    string type;
-    int minuteLength;
-    string director;
-
+	string Type;
+	int MinuteLenght;
+	string Director;
 public:
-    LibraryDVD(const std::string& dvdType, int length, const std::string& dir);
-    string getType() const;
-    int getMinuteLength() const;
-    string getDirector() const;
-    void setType(const std::string& dvdType);
-    void setMinuteLength(int length);
-    void setDirector(const std::string& dir);
-    void display() const;
+	DVD(int, string, int, string, string, bool, string, string, int, string);
+	void setType(string);
+	void setMinute(int);
+	void setDirector(string);
+	string getType() const;
+	int getMinute() const;
+	string getDirector() const;
+
 };
-
-#endif 
-
+#endif
