@@ -1,12 +1,22 @@
-#include "LibraryKeyboard.h"
 #include <iostream>
-
+#include <string>
 using namespace std;
+#include "Keyboard.h" 
 
-string LibraryKeyboard::GetInput() const {
-    string input;
-    cout << "Please enter input from the keyboard: ";
-    getline(cin, input);
-    return input;
-}
+ int Keyboard::getInteger() const {
+	 int input; 
+	 cin >> input; 
+     return input;
+ } 
 
+ long Keyboard::getLongInteger() const {
+	 long input; 
+	 cin >> input; 
+     return input;
+ } 
+
+ string Keyboard::getLine() const {
+	 string input;
+	 (cin >> input).get();
+	 return input;
+ }
