@@ -1,37 +1,34 @@
-#include "LibraryDVD.h"
-#include <iostream>
-
+#include "DVD.h"
+#include <string>
 using namespace std;
 
-LibraryDVD::LibraryDVD(const string& dvdType, int length, const string& dir) : type(dvdType), minuteLength(length), director(dir) {}
 
-string LibraryDVD::getType() const {
-    return type;
+DVD::DVD(int theItemID, string theItemName, int theReleaseDate, string theLanguage, string theDescription, bool theIfAvailable, string theGenre, string theType, int theMinute, string theDirector) : Item(theItemID, theItemName, theReleaseDate, theLanguage, theDescription, theIfAvailable, theGenre){
+	Type = theType;
+	MinuteLenght = theMinute;
+	Director = theDirector;
 }
 
-int LibraryDVD::getMinuteLength() const {
-    return minuteLength;
+void DVD::setType(string theType) {
+	Type = theType;
 }
 
-string LibraryDVD::getDirector() const {
-    return director;
+void DVD::setMinute(int theMinute) {
+	MinuteLenght = theMinute;
 }
 
-void LibraryDVD::setType(const string& dvdType) {
-    type = dvdType;
+void DVD::setDirector(string theDirector) {
+	Director = theDirector;
 }
 
-void LibraryDVD::setMinuteLength(int length) {
-    minuteLength = length;
+string DVD::getType() const {
+	return Type;
 }
 
-void LibraryDVD::setDirector(const string& dir) {
-    director = dir;
+int DVD::getMinute() const {
+	return MinuteLenght;
 }
 
-void LibraryDVD::display() const {
-    cout << "Type: " << type << endl;
-    cout << "Minute Length: " << minuteLength << endl;
-    cout << "Director: " << director << endl;
+string DVD::getDirector() const {
+	return Director;
 }
-
