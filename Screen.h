@@ -1,10 +1,16 @@
-#ifndef LIBRARYSCREEN_H
-#define LIBRARYSCREEN_H
+#ifndef SCREEN_H
+#define SCREEN_H
+#include <string>
+using namespace std;
 
-class LibraryScreen {
-public:
-    void Display() const;
-};
-
+class Screen
+{
+ public:
+	 void displayMessage(string) const; // output a message
+	 void displayMessageLine(string) const; // output message with newline
+	 void displayLongNumber(long) const;
+	 void displayLongNumberLine(long) const;
+	 void displayNumber(int) const;
+	 void displayNumberLine(int) const;
+ }; 
 #endif 
-
