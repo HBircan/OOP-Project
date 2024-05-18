@@ -1,28 +1,25 @@
-#include "LibraryBook.h"
-#include <iostream>
-
+#include "Book.h"
+#include <string>
 using namespace std;
 
-LibraryBook::LibraryBook(int isbn, const string& auth) : ISBN(isbn), author(auth) {}
 
-int LibraryBook::getISBN() const {
-    return ISBN;
+Book::Book(int theItemID, string theItemName, int theReleaseDate, string theLanguage, string theDescription, bool theIfAvailable, string theGenre, long theISBN, string theAuthor) : Item(theItemID, theItemName, theReleaseDate, theLanguage, theDescription, theIfAvailable, theGenre) {
+	ISBN = theISBN;
+	Author = theAuthor;
 }
 
-string LibraryBook::getAuthor() const {
-    return author;
+void Book::setISBN(int theISBN) {
+	ISBN = theISBN;
 }
 
-void LibraryBook::setISBN(int isbn) {
-    ISBN = isbn;
+void Book::setAuthor(string theAuthor) {
+	Author = theAuthor;
 }
 
-void LibraryBook::setAuthor(const string& auth) {
-    author = auth;
+int Book::getISBN() const {
+	return ISBN;
 }
 
-void LibraryBook::display() const {
-    cout << "ISBN: " << ISBN << endl;
-    cout << "Author: " << author << endl;
+string Book::getAuthor() const {
+	return Author;
 }
-
