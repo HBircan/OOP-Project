@@ -1,9 +1,9 @@
 #include <string>
+#include <vector>
 #include "User.h"
 using namespace std;
 
-User::User (int theItemAmount, int theUserID, string theUsername, string thePassword, string theEmail, string theContactInfo, string theAccessLevel, string theRole) {
-	ItemAmount = theItemAmount;
+User::User (int theUserID, string theUsername, string thePassword, string theEmail, string theContactInfo, string theAccessLevel, string theRole) {
 	UserID = theUserID;
 	Username = theUsername;
 	Password = thePassword;
@@ -19,10 +19,8 @@ bool User::ValidatePass(string userPassword) const {
 	else
 		return false;
 }
+
 //Modifiers
-void User::setAmount(int theItemAmount) {
-	ItemAmount = theItemAmount;
-}
 
 void  User::setID(int theUserID) {
 	theUserID = UserID;
@@ -52,6 +50,7 @@ void  User::setRole(string theRole) {
 	Role = theRole;
 }
 //Accessors
+
 int  User::getID() const {
 	return UserID;
 }
