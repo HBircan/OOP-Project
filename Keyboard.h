@@ -1,14 +1,12 @@
-#ifndef LIBRARYKEYBOARD_H
-#define LIBRARYKEYBOARD_H
-
+#ifndef KEYBOARD_H
+#define KEYBOARD_H
 #include <string>
-
 using namespace std;
 
-class LibraryKeyboard {
+class Keyboard {
 public:
-    string GetInput() const;
-};
-
-#endif 
-
+	 int getInteger() const; 
+	 long getLongInteger() const;
+	 string getLine() const; 
+}; 
+#endif
