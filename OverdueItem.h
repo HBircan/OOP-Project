@@ -1,12 +1,10 @@
-#ifndef LIBRARYOVERDUEITEM_H
-#define LIBRARYOVERDUEITEM_H
+#ifndef OVERDUEITEM_H
+#define OVERDUEITEM_H
+#include "Action.h"
 
-
-class LibraryOverdueItem {
+class OverdueItem : public Action {
 public:
-    bool IsItemOverdue() const;
-    void Execute();
+	OverdueItem(int, Screen&, Keyboard&, LibraryDatabase&);
+	virtual void Execute();
 };
-
 #endif
-
